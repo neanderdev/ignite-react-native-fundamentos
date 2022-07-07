@@ -23,12 +23,12 @@ export function Home() {
         onChangeText={setNewSkill}
       />
 
-      <Button />
+      <Button onPress={handleAddNewSkill} />
 
       <Text style={[styles.title, {marginVertical: 50}]}>My Skills</Text>
 
       {mySkills.map(skill => (
-        <SkillCard key={skill} />
+        <SkillCard key={skill} skill={skill} />
       ))}
     </View>
   );
