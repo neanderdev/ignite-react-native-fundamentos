@@ -44,9 +44,13 @@ export function Home() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome, Neander</Text>
+      <Text style={styles.title}>
+        Welcome, Neander
+      </Text>
 
-      <Text style={styles.greetLings}>{greeting}</Text>
+      <Text style={styles.greetLings}>
+        {greeting}
+      </Text>
 
       <TextInput
         style={styles.input}
@@ -55,9 +59,15 @@ export function Home() {
         onChangeText={setNewSkill}
       />
 
-      <Button onPress={handleAddNewSkill} />
+      <Button
+        title="Add"
+        onPress={handleAddNewSkill}
+        activeOpacity={0.7}
+      />
 
-      <Text style={[styles.title, { marginVertical: 50 }]}>My Skills</Text>
+      <Text style={[styles.title, { marginVertical: 50 }]}>
+        My Skills
+      </Text>
 
       <FlatList
         data={mySkills}
